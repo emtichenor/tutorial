@@ -21,7 +21,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = cool();
+  botResponse = "Chor youre a gay retard and need to take your life.";
 
   options = {
     hostname: 'api.groupme.com',
