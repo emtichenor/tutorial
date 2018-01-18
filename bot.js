@@ -1,6 +1,6 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-
+var testInt = 0;
 var botID = process.env.BOT_ID;
 
 function respond() {
@@ -9,6 +9,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
+    testInt++;
     postMessage();
     this.res.end();
   } else {
@@ -21,7 +22,7 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  botResponse = "@Nick Chor youre a gay retard and need to take your life.";
+  botResponse = "test output" + testInt;
 
   options = {
     hostname: 'api.groupme.com',
