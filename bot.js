@@ -6,9 +6,10 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/kill yourself$/;
+  var request2 = this.req.chuncks[0];
   var expression = "!kys";
 
-  if(request.text && expression.test(request.text)) {
+  if(request.text && request2.includes(expression) {
     this.res.writeHead(200);
     testInt++;
     postMessage();
