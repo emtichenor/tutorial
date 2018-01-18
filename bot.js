@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/kill yourself$/;
   var expression = "!kys";
 
-  if(request.text && request.text.includes(expression)) {
+  if(request.text && expression.test(request.text)) {
     this.res.writeHead(200);
     testInt++;
     postMessage();
